@@ -20,5 +20,8 @@ class Solution(object):
             else:
                 mapT[t[i]] = 1
         
-        return mapS == mapT
+        for i in mapS:
+            if mapS.get(i) != mapT.get(i):
+                return False
+        return True
     
